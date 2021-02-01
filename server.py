@@ -3,8 +3,8 @@ import threading
 
 HEADER = 8
 PORT = 5050
-SERVER = "192.168.1.74"
-ADDR = (SERVER, PORT)
+SERVER = "192.168.1.74" # Enter the IPV4 address that you are hosting
+ADDR = (SERVER, PORT)   # the server with here
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!leave"
 
