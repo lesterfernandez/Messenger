@@ -3,9 +3,9 @@ import threading
 
 HEADER = 8
 PORT = 5050
-SERVER = "192.168.1.74" # Enter the IPV4 address that you are hosting
-ADDR = (SERVER, PORT)   # the server with here
-FORMAT = 'utf-8'
+SERVER = "ENTER IPV4" # Enter the IPV4 address that you are hosting
+ADDR = (SERVER, PORT) # the server with here 
+FORMAT = 'utf-8'      # use "IPCONFIG" on windows or "hostname -I" on linux 
 DISCONNECT_MESSAGE = "!leave"
 
 new_msg = ""
@@ -16,9 +16,6 @@ server.bind(ADDR)
 chat = []
 
 conns = []
-addrs = []
-
-threadID = []
 
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
@@ -55,10 +52,9 @@ def start():
     while True:
         conn, addr = server.accept()
         conns.append(conn)
-        addrs.append(addr)
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
-        print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
+        print(f"[ACTIVE CONNECTIONS] : {threading.activeCount() - 1}")
 
 
 print("[STARTING] server is starting...")

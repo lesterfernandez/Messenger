@@ -5,9 +5,9 @@ HEADER = 8
 PORT = 5050
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!leave"
-SERVER = "192.168.1.74" # Enter the IPV4 address that you are hosting
-ADDR = (SERVER, PORT)   # the server with here
-
+SERVER = "IPV4 ADDR" # Enter the IPV4 address that you are hosting
+ADDR = (SERVER, PORT) # the server with here 
+                     # use "IPCONFIG" on windows or "hostname -I" on linux 
 name = " "
 set_name = False
 
